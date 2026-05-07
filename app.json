@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "brain.vat",
+    "slug": "brain-vat",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "brainvat",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#141414",
+    "splash": {
+      "backgroundColor": "#141414",
+      "resizeMode": "contain"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#141414"
+      },
+      "package": "com.kaiserfactorial.brainvat",
+      "softwareKeyboardLayoutMode": "pan"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#141414"
+        }
+      ],
+      "expo-secure-store"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

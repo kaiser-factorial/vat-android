@@ -1,0 +1,13 @@
+{
+  "_comment": "Add these to the main ANDROID/package.json before building voice mode. Run: npx expo install expo-av expo-file-system",
+  "dependencies_to_add": {
+    "expo-av": "~15.0.2",
+    "expo-file-system": "~18.0.11"
+  },
+  "_notes": {
+    "expo-av": "Handles audio playback. Supports multiple concurrent Sound objects — required for the two-bot overlap design. Already included in many Expo projects; check if it's already in package.json before adding.",
+    "expo-file-system": "Used by VoxtralService to write the MP3 binary from the API response to a temp cache file before handing the URI to expo-av. May already be present.",
+    "no_native_module_needed": "Both packages use Expo's managed workflow and require no additional native code or ejection. They will work with the current app.json / EAS build setup.",
+    "streaming_upgrade": "If streaming PCM playback is added later, react-native-track-player would be needed (it supports audio streams). That DOES require a development build. For now, expo-av + non-streaming MP3 is fine within managed workflow."
+  }
+}
